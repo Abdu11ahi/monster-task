@@ -1,81 +1,89 @@
 <main class="flex flex-col h-screen">
   <!-- header -->
-  <header class="h-16 flex items-center justify-between px-4 bg-white border">
-    <div>
-      <img
-        class="h-10 w-auto object-contain"
-        src="assets/monsterlogo.png"
-        alt="monster logo"
-      />
+  <header class="flex h-16 items-center justify-between border px-4 bg-white">
+    <div class="flex items-center">
+      <div>
+        <img
+          class="h-8 w-auto object-contain px-2"
+          src="assets/monsterlogo.png"
+          alt="monster logo"
+        />
+      </div>
+      <div class="flex justify-center px-[22px]">Monster Energy</div>
     </div>
-    <div>Monster Energy</div>
-    <svg
-      width="55"
-      height="55"
-      viewBox="0 0 55 55"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <rect width="54.095" height="54.095" rx="27.0475" fill="white" />
-      <g clip-path="url(#clip0_2032_11)">
-        <path
-          d="M38.8541 29.146V25.4855C38.8557 23.0114 37.9134 20.6093 36.1796 18.6674C34.4459 16.7256 32.0221 15.3575 29.3001 14.7846C29.3208 14.7136 29.337 14.6416 29.3484 14.569V9.76152C29.3484 9.22218 29.1061 8.70492 28.6748 8.32354C28.2434 7.94216 27.6584 7.72791 27.0484 7.72791C26.4385 7.72791 25.8535 7.94216 25.4221 8.32354C24.9908 8.70492 24.7485 9.22218 24.7485 9.76152V14.569C24.7599 14.6416 24.7761 14.7136 24.7968 14.7846C22.0748 15.3575 19.651 16.7256 17.9172 18.6674C16.1835 20.6093 15.2412 23.0114 15.2428 25.4855V29.146C15.2428 33.9982 10.9487 35.2102 10.9487 37.6363C10.9487 38.8423 10.9487 40.0625 12.1861 40.0625H41.9108C43.1482 40.0625 43.1482 38.8423 43.1482 37.6363C43.1482 35.2102 38.8541 33.9982 38.8541 29.146Z"
-          fill="#6B7280"
-        />
-        <path
-          d="M19.7415 42.0961C20.3516 43.3631 21.3696 44.4435 22.6688 45.2029C23.968 45.9623 25.491 46.3672 27.0484 46.3672C28.6059 46.3672 30.1289 45.9623 31.4281 45.2029C32.7273 44.4435 33.7453 43.3631 34.3554 42.0961H19.7415Z"
-          fill="#6B7280"
-        />
-      </g>
-      <defs>
-        <clipPath id="clip0_2032_11">
-          <rect
-            width="38.6393"
-            height="38.6393"
-            fill="white"
-            transform="translate(7.72803 7.72791)"
-          />
-        </clipPath>
-      </defs>
-    </svg>
 
-    <svg
-      width="55"
-      height="55"
-      viewBox="0 0 55 55"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <rect width="54.095" height="54.095" rx="27.0475" fill="white" />
-      <g clip-path="url(#clip0_2032_14)">
-        <path
-          d="M42.4436 37.1175C40.2589 37.0664 38.1056 36.576 36.1068 35.6743C34.108 34.7725 32.3029 33.4772 30.7949 31.8624C29.2868 30.2476 28.1054 28.345 27.3182 26.2635C26.531 24.182 26.1535 21.9624 26.2072 19.7317C26.2689 17.5212 26.7582 15.345 27.647 13.3284C28.5358 11.3119 29.8065 9.49478 31.386 7.98182C30.5744 7.84847 29.7553 7.76782 28.9338 7.74035C26.4396 7.6489 23.9523 8.06231 21.6153 8.95676C19.2782 9.85121 17.1376 11.209 15.3167 12.952C13.4959 14.6949 12.0308 16.7886 11.0058 19.1123C9.98084 21.436 9.4163 23.9438 9.3447 26.4913C9.2731 29.0387 9.69586 31.5755 10.5886 33.9554C11.4814 36.3353 12.8265 38.5113 14.5464 40.358C16.2664 42.2047 18.3272 43.6857 20.6102 44.7155C22.8932 45.7454 25.3531 46.3037 27.8483 46.3585C31.2246 46.4614 34.5674 45.65 37.5371 44.0065C40.5068 42.3631 42.9975 39.9463 44.7563 37.0016C43.989 37.095 43.2162 37.1338 42.4436 37.1175Z"
-          fill="#6B7280"
-        />
-      </g>
-      <defs>
-        <clipPath id="clip0_2032_14">
-          <rect
-            width="38.6393"
-            height="38.6393"
-            fill="white"
-            transform="translate(7.72754 7.72791)"
+    <div class="flex items-center gap-3">
+      <svg
+        width="28"
+        height="28"
+        viewBox="0 0 55 55"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect width="54.095" height="54.095" rx="27.0475" fill="white" />
+        <g clip-path="url(#clip0_2032_11)">
+          <path
+            d="M38.8541 29.146V25.4855C38.8557 23.0114 37.9134 20.6093 36.1796 18.6674C34.4459 16.7256 32.0221 15.3575 29.3001 14.7846C29.3208 14.7136 29.337 14.6416 29.3484 14.569V9.76152C29.3484 9.22218 29.1061 8.70492 28.6748 8.32354C28.2434 7.94216 27.6584 7.72791 27.0484 7.72791C26.4385 7.72791 25.8535 7.94216 25.4221 8.32354C24.9908 8.70492 24.7485 9.22218 24.7485 9.76152V14.569C24.7599 14.6416 24.7761 14.7136 24.7968 14.7846C22.0748 15.3575 19.651 16.7256 17.9172 18.6674C16.1835 20.6093 15.2412 23.0114 15.2428 25.4855V29.146C15.2428 33.9982 10.9487 35.2102 10.9487 37.6363C10.9487 38.8423 10.9487 40.0625 12.1861 40.0625H41.9108C43.1482 40.0625 43.1482 38.8423 43.1482 37.6363C43.1482 35.2102 38.8541 33.9982 38.8541 29.146Z"
+            fill="#6B7280"
           />
-        </clipPath>
-      </defs>
-    </svg>
+          <path
+            d="M19.7415 42.0961C20.3516 43.3631 21.3696 44.4435 22.6688 45.2029C23.968 45.9623 25.491 46.3672 27.0484 46.3672C28.6059 46.3672 30.1289 45.9623 31.4281 45.2029C32.7273 44.4435 33.7453 43.3631 34.3554 42.0961H19.7415Z"
+            fill="#6B7280"
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_2032_11">
+            <rect
+              width="38.6393"
+              height="38.6393"
+              fill="white"
+              transform="translate(7.72803 7.72791)"
+            />
+          </clipPath>
+        </defs>
+      </svg>
 
-    <div>AM</div>
+      <svg
+        width="28"
+        height="28"
+        viewBox="0 0 55 55"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect width="54.095" height="54.095" rx="27.0475" fill="white" />
+        <g clip-path="url(#clip0_2032_14)">
+          <path
+            d="M42.4436 37.1175C40.2589 37.0664 38.1056 36.576 36.1068 35.6743C34.108 34.7725 32.3029 33.4772 30.7949 31.8624C29.2868 30.2476 28.1054 28.345 27.3182 26.2635C26.531 24.182 26.1535 21.9624 26.2072 19.7317C26.2689 17.5212 26.7582 15.345 27.647 13.3284C28.5358 11.3119 29.8065 9.49478 31.386 7.98182C30.5744 7.84847 29.7553 7.76782 28.9338 7.74035C26.4396 7.6489 23.9523 8.06231 21.6153 8.95676C19.2782 9.85121 17.1376 11.209 15.3167 12.952C13.4959 14.6949 12.0308 16.7886 11.0058 19.1123C9.98084 21.436 9.4163 23.9438 9.3447 26.4913C9.2731 29.0387 9.69586 31.5755 10.5886 33.9554C11.4814 36.3353 12.8265 38.5113 14.5464 40.358C16.2664 42.2047 18.3272 43.6857 20.6102 44.7155C22.8932 45.7454 25.3531 46.3037 27.8483 46.3585C31.2246 46.4614 34.5674 45.65 37.5371 44.0065C40.5068 42.3631 42.9975 39.9463 44.7563 37.0016C43.989 37.095 43.2162 37.1338 42.4436 37.1175Z"
+            fill="#6B7280"
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_2032_14">
+            <rect
+              width="38.6393"
+              height="38.6393"
+              fill="white"
+              transform="translate(7.72754 7.72791)"
+            />
+          </clipPath>
+        </defs>
+      </svg>
+
+      <div
+        class="flex h-8 w-8 items-center justify-center rounded-full bg-green-400 font-bold text-white"
+      >
+        AM
+      </div>
+    </div>
   </header>
-  <!-- table-->
 
-  <!-- table-->
   <main
     class="flex-1 bg-white overflow-auto flex flex-col items-center gap-6 px-6 py-8"
   >
     <h1 class="text-center text-3xl font-bold text-slate-800 py-6">
       Monster Energy Projects
     </h1>
+    <!-- table-->
     <div class="border border-slate-200 rounded-md p-6">
       <table class="table-auto">
         <div class="w-full max-w-sm min-w-[200px]">
@@ -106,8 +114,9 @@
           </div>
         </div>
         <div>
-          <div class="flex gap-6">
-            <label class="flex items-center gap-2">
+          <!-- radio buttons-->
+          <div class="flex items-center justify-between px-4 gap-6">
+            <label class="flex items-center gap-3 px-3">
               <input type="radio" name="filter" value="all" />
               All
             </label>
@@ -200,8 +209,8 @@
   </main>
 
   <!-- footer: -->
-  <footer class="h-16 flex items-center justify-between px-5 bg-white border">
-    <div>
+  <footer class="h-16 flex items-center justify-between px-12 bg-white border">
+    <div class="flex flex-col items-center gap-2">
       <svg
         width="20"
         height="20"
@@ -223,12 +232,12 @@
         </defs>
       </svg>
 
-      Shop
+      <span> Shop </span>
     </div>
-    <div>
+    <div class="flex flex-col items-center gap-2">
       <svg
         width="20"
-        height="17"
+        height="20"
         viewBox="0 0 20 17"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -238,10 +247,9 @@
           fill="#4B5563"
         />
       </svg>
-
-      Truck
+      <span> Truck </span>
     </div>
-    <div>
+    <div class="flex flex-col items-center gap-2">
       <svg
         width="20"
         height="20"
@@ -269,10 +277,9 @@
           </clipPath>
         </defs>
       </svg>
-
-      Pen
+      <span> Pen </span>
     </div>
-    <div>
+    <div class="flex flex-col items-center gap-2">
       <svg
         width="20"
         height="20"
@@ -308,13 +315,12 @@
           </clipPath>
         </defs>
       </svg>
-
-      Stocks
+      <span> Stocks </span>
     </div>
-    <div>
+    <div class="flex flex-col items-center gap-2">
       <svg
         width="20"
-        height="19"
+        height="20"
         viewBox="0 0 20 19"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -328,8 +334,7 @@
           fill="#4B5563"
         />
       </svg>
-
-      Chat
+      <span> Chat </span>
     </div>
   </footer>
 </main>
