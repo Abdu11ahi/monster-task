@@ -14,7 +14,9 @@ interface TableRow {
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css'],
 })
-export class DashboardComponent {
+export class DashboardComponent{
+  
+  
   table: TableRow[] = [
     {
       id: 1,
@@ -97,4 +99,28 @@ export class DashboardComponent {
   yesNo: 'No'
 },
   ];
+
+  filteredTable: TableRow[] = [];
+  searchTerm: string = '';
+
+  ngOnInit() {
+    this.filteredTable = this.table;
+  }
+
+  onSearch(term: string) {
+    this.searchTerm = term.trim().toLowerCase();
+
+    if (!this.searchTerm) {
+      this.filteredTable = this.table;
+      return;
+    }
+
+    this.filteredTable = this.table.filter(row =>
+      row.project.toLowerCase().includes(this.searchTerm) ||
+      row.task.toLowerCase().includes(this.searchTerm) ||
+      row.team.toLowerCase().includes(this.searchTerm) ||
+      row.location.toLowerCase().includes(this.searchTerm) ||
+      row.yesNo.toLowerCase().includes(this.searchTerm)
+    );
+  }
 }
