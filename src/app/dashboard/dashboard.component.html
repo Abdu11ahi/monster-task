@@ -76,137 +76,309 @@
       </div>
     </div>
   </header>
-
-  <main
-    class="flex-1 bg-white overflow-auto flex flex-col items-center gap-6 px-6 py-8"
-  >
+  <div class="flex-shrink-0">
     <h1 class="text-center text-3xl font-bold text-slate-800 py-6">
       Monster Energy Projects
     </h1>
+  </div>
+  <div class="flex-1 bg-white flex flex-col w-full px-4 overflow-auto">
     <!-- table-->
-    <div class="border border-slate-200 rounded-md p-6">
-      <table class="table-auto">
-        <div class="w-full max-w-sm min-w-[200px]">
-          <div class="relative flex items-center">
-            <svg
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              class="absolute w-5 h-5 top-2.5 left-2.5 text-slate-600"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M10.5 3.75a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5ZM2.25 10.5a8.25 8.25 0 1 1 14.59 5.28l4.69 4.69a.75.75 0 1 1-1.06 1.06l-4.69-4.69A8.25 8.25 0 0 1 2.25 10.5Z"
-                clip-rule="evenodd"
-              />
-            </svg>
-
-            <input
-              class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md pl-10 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
-              placeholder="Search projects..."
+    <div class="border border-slate-200 rounded-md p-6 flex flex-col">
+      <!-- search-->
+      <div class="w-full max-w-sm min-w-[200px]">
+        <div class="relative flex items-center">
+          <svg
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="absolute w-5 h-5 top-2.5 left-2.5 text-slate-600"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M10.5 3.75a6.75 6.75 0 1 0 0 13.5 6.75 6.75 0 0 0 0-13.5ZM2.25 10.5a8.25 8.25 0 1 1 14.59 5.28l4.69 4.69a.75.75 0 1 1-1.06 1.06l-4.69-4.69A8.25 8.25 0 0 1 2.25 10.5Z"
+              clip-rule="evenodd"
             />
+          </svg>
 
-            <button
-              class="rounded-md bg-green-400 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-              type="button"
-            >
-              Search
-            </button>
-          </div>
+          <input
+            class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-l-lg pl-10 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
+            placeholder="Search projects..."
+          />
+
+          <button
+            class="rounded-r-lg bg-green-600 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+            type="button"
+          >
+            Search
+          </button>
         </div>
-        <div>
-          <!-- radio buttons-->
-          <div class="flex items-center justify-between px-4 gap-6">
-            <label class="flex items-center gap-3 px-3">
-              <input type="radio" name="filter" value="all" />
-              All
-            </label>
+      </div>
+      <div class="py-6">
+        <!-- radio buttons-->
+        <div class="flex items-center justify-between px-4 gap-6">
+          <label class="flex items-center gap-3 px-3 accent-green-600">
+            <input type="radio" name="filter" value="all" />
+            All
+          </label>
 
-            <label class="flex items-center gap-2">
-              <input type="radio" name="filter" value="sales" />
-              Sales
-            </label>
+          <label class="flex items-center gap-2 accent-green-600">
+            <input type="radio" name="filter" value="sales" />
+            Sales
+          </label>
 
-            <label class="flex items-center gap-2">
-              <input type="radio" name="filter" value="promo" />
-              Promo
-            </label>
+          <label class="flex items-center gap-2 accent-green-600">
+            <input type="radio" name="filter" value="promo" />
+            Promo
+          </label>
 
-            <label class="flex items-center gap-2">
-              <input type="radio" name="filter" value="marketing" />
-              Marketing
-            </label>
+          <label class="flex items-center gap-2 accent-green-600">
+            <input type="radio" name="filter" value="marketing" />
+            Marketing
+          </label>
 
-            <label class="flex items-center gap-2">
-              <input type="radio" name="filter" value="other" />
-              Other
-            </label>
-          </div>
+          <label class="flex items-center gap-2 accent-green-600">
+            <input type="radio" name="filter" value="other" />
+            Other
+          </label>
         </div>
-        <thead></thead>
-        <tr>
-          <th class="px-6 py-3">Project</th>
-          <th class="px-6 py-3">Task</th>
-          <th class="px-6 py-3">Team</th>
-          <th class="px-6 py-3">Location</th>
-          <th class="px-6 py-3">Yes/No</th>
-          <th class="px-6 py-3">Star</th>
-          <th class="px-6 py-3">Seen</th>
-        </tr>
+      </div>
+      <div class="flex-1 overflow-auto">
+        <table class="w-full h-full table-fixed border-collapse">
+          <thead>
+            <tr class="border-b border-slate-200 bg-slate-50">
+              <th
+                class="w-[12%] px-4 py-3 text-left text-sm font-semibold text-slate-700"
+              >
+                <div class="flex items-center gap-1">
+                  <span> Project </span>
+                  <div class="">
+                    <button
+                      class="bg-transparent p-1 text-slate-400 hover:text-slate-700"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        class="size-6 rounded p-1 text-slate-400 hover:bg-slate-200 hover:text-slate-700"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </th>
+              <th
+                class="w-[12%] px-4 py-3 text-left text-sm font-semibold text-slate-700"
+              >
+                <div class="flex items-center gap-1">
+                  <span> Project </span>
+                  <div class="">
+                    <button
+                      class="bg-transparent p-1 text-slate-400 hover:text-slate-700"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        class="size-6 rounded p-1 text-slate-400 hover:bg-slate-200 hover:text-slate-700"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </th>
+              <th
+                class="w-[12%] px-4 py-3 text-left text-sm font-semibold text-slate-700"
+              >
+                <div class="flex items-center gap-1">
+                  <span> Team </span>
+                  <div class="">
+                    <button
+                      class="bg-transparent p-1 text-slate-400 hover:text-slate-700"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        class="size-6 rounded p-1 text-slate-400 hover:bg-slate-200 hover:text-slate-700"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </th>
+              <th
+                class="w-[12%] px-4 py-3 text-left text-sm font-semibold text-slate-700"
+              >
+                <div class="flex items-center gap-1">
+                  <span> Location </span>
+                  <div class="">
+                    <button
+                      class="bg-transparent p-1 text-slate-400 hover:text-slate-700"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        class="size-6 rounded p-1 text-slate-400 hover:bg-slate-200 hover:text-slate-700"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </th>
+              <th
+                class="w-[12%] px-4 py-3 text-left text-sm font-semibold text-slate-700"
+              >
+                <div class="flex items-center gap-1">
+                  <span> Yes/No </span>
+                  <div class="">
+                    <button
+                      class="bg-transparent p-1 text-slate-400 hover:text-slate-700"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        class="size-6 rounded p-1 text-slate-400 hover:bg-slate-200 hover:text-slate-700"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </th>
 
-        <tbody>
-          <tr *ngFor="let row of table">
-            <td>{{ row.project }}</td>
-            <td>{{ row.task }}</td>
-            <td>{{ row.team }}</td>
-            <td>{{ row.location }}</td>
-            <td>{{ row.yesNo }}</td>
-            <td>
-              <img class="h-5 w-5" src="assets/star-outline.svg" alt="Star" />
-            </td>
-            <td>
-              <img class="h-5 w-5" src="assets/vector.svg" alt="vector" />
-            </td>
-          </tr>
-        </tbody>
-      </table>
+              <th
+                class="w-[12%] px-24 py-3 text-center text-sm font-semibold text-slate-700"
+              >
+                <div class="flex items-center gap-1">
+                  <span> Star </span>
+                  <div class="">
+                    <button
+                      class="bg-transparent p-1 text-slate-400 hover:text-slate-700"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        class="size-6 rounded p-1 text-slate-400 hover:bg-slate-200 hover:text-slate-700"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </th>
+              <th
+                class="w-[12%] px-4 py-3 text-center text-sm font-semibold text-slate-700"
+              >
+                Seen
+              </th>
+            </tr>
+          </thead>
+
+          <tbody class="divide-y divide-slate-100">
+            <tr *ngFor="let row of table" class="hover:bg-slate-50">
+              <td class="px-4 py-3 text-left text-sm text-slate-700 max-h-24">
+                {{ row.project }}
+              </td>
+              <td class="px-4 py-3 text-left text-sm text-slate-700 max-h-24">
+                {{ row.task }}
+              </td>
+              <td class="px-4 py-3 text-left text-sm text-slate-700 max-h-24">
+                {{ row.team }}
+              </td>
+              <td class="px-4 py-3 text-left text-sm text-slate-700 max-h-24">
+                {{ row.location }}
+              </td>
+              <td class="px-4 py-3 text-left text-sm text-slate-700 max-h-24">
+                {{ row.yesNo }}
+              </td>
+              <td class="px-4 py-3 text-center">
+                <img
+                  class="h-5 w-5 mx-auto"
+                  src="assets/star-outline.svg"
+                  alt="Star"
+                />
+              </td>
+              <td class="px-4 py-3 text-center">
+                <img
+                  class="h-5 w-5 mx-auto"
+                  src="assets/vector.svg"
+                  alt="vector"
+                />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!--Pagination-->
       <div class="flex items-center justify-between mt-4">
         <div class="text-sm text-slate-600">1-3 of 10</div>
 
         <div class="flex">
           <button
-            class="bg-white border border-slate-300 text-gray-700 py-2 px-4"
+            class="bg-white border border-slate-300 text-gray-700 py-2 px-4 hover:bg-green-300"
           >
             <
           </button>
           <button
-            class="bg-white border border-slate-300 text-gray-700 py-2 px-4"
+            class="bg-white border border-slate-300 text-gray-700 py-2 px-4 hover:bg-green-300"
           >
             1
           </button>
           <button
-            class="bg-white border border-slate-300 text-gray-700 py-2 px-4"
+            class="bg-white border border-slate-300 text-gray-700 py-2 px-4 hover:bg-green-300"
           >
             2
           </button>
           <button
-            class="bg-white border border-slate-300 text-gray-700 py-2 px-4"
+            class="bg-white border border-slate-300 text-gray-700 py-2 px-4 hover:bg-green-300"
           >
             3
           </button>
           <button
-            class="bg-white border border-slate-300 text-gray-700 py-2 px-4"
+            class="bg-white border border-slate-300 text-gray-700 py-2 px-4 hover:bg-green-300"
           >
             4
           </button>
           <button
-            class="bg-white border border-slate-300 text-gray-700 py-2 px-4"
+            class="bg-white border border-slate-300 text-gray-700 py-2 px-4 hover:bg-green-300"
           >
             >
           </button>
         </div>
       </div>
     </div>
-  </main>
+  </div>
 
   <!-- footer: -->
   <footer class="h-16 flex items-center justify-between px-12 bg-white border">
